@@ -1,7 +1,11 @@
 # pyrexp
 regex wrapper like Perl
 
-Takaaki Nakajima <ryumei@users.noreply.github.com>
+[Takaaki Nakajima](ryumei@users.noreply.github.com)
+
+* `m(string, pattern)` for matching `string =~ /pattern/`
+* `s(string, pattern, replace)` for substitution `string =~ s/pattern/replace/`.
+
 
 ## Usage
 
