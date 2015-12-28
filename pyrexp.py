@@ -1,16 +1,13 @@
 # -*- coding:utf-8 -*-
-u"""
 
-"""
 import re
 
 class PyRExp(object):
     u"""regex wrapper like Perl"""
 
     def __init__(self, caching=True):
-        u"""
-cache: Disable/Enable pattern caching
-"""
+        u"""Argument:
+* cache: Disable/Enable pattern caching"""
         self.caching = caching
         if caching:
             self.patterns = {}
@@ -34,7 +31,7 @@ cache: Disable/Enable pattern caching
         return reduce(lambda a, b: a + b, options, 0)
     
     def m(self, string, pattern, i=False, options=()):
-        u""" Like match operator "string" =~ /pattern/
+        u"""matching like "string" =~ /pattern/
 
         * i: ignore case (re.IGNORECASE)
         * options: tuple of regexp options of python (such as re.L, re.M)
@@ -69,7 +66,7 @@ cache: Disable/Enable pattern caching
         return pat.match(string)
 
     def s(self, string, pattern, replace, i=False, options=()):
-        u"""Substitution like string =~ s/pattern/replace/
+        u"""Substitution like "string =~ s/pattern/replace/"
         
         Success matching and replacing
         >>> PyRExp().s(u'blue socks and red shoes', u'(blue|white|red)', u'colour')
